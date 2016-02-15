@@ -1,0 +1,1076 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>支持的特性</title>
+<!-- 2016-02-08 一 21:18 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="An Org-mode Blogger" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="css/worg.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">支持的特性</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. 基本</a></li>
+<li><a href="#sec-2">2. 表格</a></li>
+<li><a href="#sec-3">3. 代码</a>
+<ul>
+<li><a href="#sec-3-1">3.1. 多语言高亮</a></li>
+<li><a href="#sec-3-2">3.2. 索引</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. 公式</a></li>
+<li><a href="#sec-5">5. 图片</a>
+<ul>
+<li><a href="#sec-5-1">5.1. 居中</a></li>
+<li><a href="#sec-5-2">5.2. 左侧</a></li>
+<li><a href="#sec-5-3">5.3. 多图</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. 宏定义</a>
+<ul>
+<li><a href="#sec-6-1">6.1. summary 宏</a></li>
+<li><a href="#sec-6-2">6.2. hidden 宏</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. 扩展功能</a>
+<ul>
+<li><a href="#sec-7-1">7.1. ditaa</a></li>
+<li><a href="#sec-7-2">7.2. Graphviz</a></li>
+<li><a href="#sec-7-3">7.3. PlantUML</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8. 导出</a>
+<ul>
+<li><a href="#sec-8-1">8.1. html</a></li>
+<li><a href="#sec-8-2">8.2. <span class="todo TODO">TODO</span> LaTeX</a></li>
+<li><a href="#sec-8-3">8.3. docx</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+注:
+</p>
+
+<p>
+图片和示例均来自 <a href="http://cse3521.artifice.cc/index.html"><i>Intro to AI</i> by Joshua Eckroth</a>
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 基本</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>一般强调
+<ul class="org-ul">
+<li><b>加粗</b>
+</li>
+<li><i>斜体</i>
+</li>
+<li><span class="underline">下划线</span>
+</li>
+<li><code>代码</code>
+</li>
+<li><code>verbatim</code>
+</li>
+<li><del>删除</del>
+</li>
+</ul>
+</li>
+
+<li>定义
+<dl class="org-dl">
+<dt> &alpha; </dt><dd>the utility of the best (highest-value) choice we have
+found so far at any choice point along the path in the
+"max" mode of minimax
+</dd>
+<dt> &beta; </dt><dd>the utility of the best (lowest-value) choice for the
+"min" mode of minimax
+</dd>
+</dl>
+</li>
+
+<li><a href="http://orgmode.org">超链接</a>
+</li>
+
+<li>引用
+<blockquote>
+<p>
+绝望之为虚妄, 正与希望相同.
+               &#x2014; 鲁迅
+</p>
+</blockquote>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 表格</h2>
+<div class="outline-text-2" id="text-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+</colgroup>
+
+<colgroup>
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+
+<colgroup>
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="right">N</th>
+<th scope="col" class="right">N<sup>2</sup></th>
+<th scope="col" class="right">N<sup>3</sup></th>
+<th scope="col" class="right">N<sup>4</sup></th>
+<th scope="col" class="right"><code>sqrt(n)</code></th>
+<th scope="col" class="right"><code>sqrt[4](N)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+</tr>
+
+<tr>
+<td class="right">2</td>
+<td class="right">4</td>
+<td class="right">8</td>
+<td class="right">16</td>
+<td class="right">1.4142136</td>
+<td class="right">1.1892071</td>
+</tr>
+
+<tr>
+<td class="right">3</td>
+<td class="right">9</td>
+<td class="right">27</td>
+<td class="right">81</td>
+<td class="right">1.7320508</td>
+<td class="right">1.3160740</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> 代码</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> 多语言高亮</h3>
+<div class="outline-text-3" id="text-3-1">
+<ol class="org-ol">
+<li>Translate this code from a <code>for</code> loop into a <code>while</code> loop that does
+the same thing.
+
+<div class="org-src-container">
+
+<pre class="src src-python"><span class="linenr">1: </span><span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(1,100):
+<span class="linenr">2: </span>    <span class="org-keyword">print</span> <span class="org-string">"i = "</span>, i
+</pre>
+</div>
+</li>
+
+<li>Translate this code from a <code>while</code> loop into a <code>for</code> loop that does
+the same thing:
+
+<div class="org-src-container">
+
+<pre class="src src-python"><span class="org-variable-name">i</span> = 20
+<span class="org-keyword">while</span> (i &gt; 0):
+    <span class="org-keyword">print</span> <span class="org-string">"i = "</span>, i
+    <span class="org-variable-name">i</span> -= 1
+</pre>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> 索引</h3>
+<div class="outline-text-3" id="text-3-2">
+<div class="org-src-container">
+
+<pre class="src src-c"><span class="linenr">1: </span><span class="org-preprocessor">#include</span> <span class="org-string">&lt;stdio.h&gt;</span>
+<span class="linenr">2: </span>
+<span id="coderef-argv" class="coderef-off"><span class="linenr">3: </span><span class="org-type">int</span> <span class="org-function-name">main</span>( <span class="org-type">int</span> <span class="org-variable-name">argc</span>, <span class="org-type">char</span> **<span class="org-variable-name">argv</span>)</span>
+<span class="linenr">4: </span>{
+<span id="coderef-atoi" class="coderef-off"><span class="linenr">5: </span>    <span class="org-type">int</span> <span class="org-variable-name">a</span> = atoi( argv[1] );</span>
+<span class="linenr">6: </span>    <span class="org-type">int</span> <span class="org-variable-name">b</span> = atoi( argv[2] );
+<span class="linenr">7: </span>    printf( <span class="org-string">"a + b = %d + %d = %d\n"</span>, a, b, a+b );
+<span class="linenr">8: </span>    <span class="org-keyword">return</span> 0;
+<span class="linenr">9: </span>}
+</pre>
+</div>
+
+<ul class="org-ul">
+<li><a href="#coderef-argv"class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-argv');" onmouseout="CodeHighlightOff(this, 'coderef-argv');">第 3 行</a> 的 <code>argc</code> 是 count of args (arguments), <code>argv</code> 是
+arguments 数组.
+</li>
+<li><a href="#coderef-atoi"class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-atoi');" onmouseout="CodeHighlightOff(this, 'coderef-atoi');">第 5 行</a> 的 <code>atoi</code> 把 <code>char *</code> 转化为 <code>int</code>.
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> 公式</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+We see that there are three variable assignments that make the whole
+expression true: \(x\) is false, \(y\) is true, and \(z\) is true; \(x\) is
+false, \(y\) is false, and \(z\) is true; and \(x\) is false, \(y\) is false,
+and \(z\) is false.
+</p>
+
+<p>
+Boole's and De Morgan's Laws
+</p>
+
+<ul class="org-ul">
+<li>\(\neg F \equiv T\)
+</li>
+
+<li>\(\neg T \equiv F\)
+</li>
+</ul>
+
+\begin{matrix}
+1 & x & x^2 \\
+1 & y & y^2 \\
+1 & z & z^2 \\
+\end{matrix}
+
+<p>
+f(n) =
+</p>
+\begin{cases}
+n/2,  & \text{if \(n\) is even} \\
+3n+1, & \text{if \(n\) is odd}
+\end{cases}
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> 图片</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> 居中</h3>
+<div class="outline-text-3" id="text-5-1">
+<div class="center">
+
+<div class="figure">
+<p><img src="./images/lena.jpg" alt="lena.jpg" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> 左侧</h3>
+<div class="outline-text-3" id="text-5-2">
+<img align="left" src="images/lena.jpg" alt="Lena (Lenna) Söderberg"
+title="Lena (Lenna) Söderberg" style="margin: 0 10px 10px 0;"/>
+
+<p>
+This photo of Lena (Lenna) Söderberg is the most widely used test
+image for computer vision applications. I have made a conscious
+decision to use this image for examples on this webpage. We should be
+respectful of the woman in the photo and know how this image came to
+be. Read about the photo at <a href="http://www.cs.cmu.edu/~chuck/lennapg/lenna.shtml">The Lenna story</a>.
+</p>
+
+<div style="clear: both;" />
+</div>
+</div>
+
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> 多图</h3>
+<div class="outline-text-3" id="text-5-3">
+<div style="clear: both;"/>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left"><img src="./images/lena-blur10x10.jpg" alt="lena-blur10x10.jpg" /></td>
+<td class="left"><img src="./images/lena-blur20x20.jpg" alt="lena-blur20x20.jpg" /></td>
+<td class="left"><img src="./images/lena-blur20x1.jpg" alt="lena-blur20x1.jpg" /></td>
+</tr>
+
+<tr>
+<td class="left">Kernel is 10x10, all values equal to 0.01</td>
+<td class="left">Kernel is 20x20, all values equal to 0.0025</td>
+<td class="left">Kernel is 20x1, all values equal to 0.05</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+We can also achieve a sharpening effect.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left"><img src="./images/sharpen-convolution.png" alt="sharpen-convolution.png" /></td>
+<td class="left"><img src="./images/lena-sharpen.jpg" alt="lena-sharpen.jpg" /></td>
+</tr>
+</tbody>
+</table>
+
+<div class="center">
+
+<div class="figure">
+<p><img src="./images/3D_Convolution_Animation.gif" alt="3D_Convolution_Animation.gif" />
+</p>
+</div>
+
+<p>
+From <a href="http://en.m.wikipedia.org/wiki/File:3D_Convolution_Animation.gif">Wikipedia</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> 宏定义</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> summary 宏</h3>
+<div class="outline-text-3" id="text-6-1">
+<div class="summary"><h2>Summary</h2>
+<ul class="org-ul">
+<li>\(P(a|b) = P(b|a)P(a)/P(b)\) is Bayes' formula ("Bayes' rule", "Bayes'
+theorem"); it is just a rewrite of the rules of probability. It is
+required that \(P(b) \neq 0\).
+</li>
+<li>Sometimes, we only want to know if \(P(h_1|e) > P(h_2|e)\)
+(probability of hypothesis 1 is greater than probability of
+hypothesis 2, given the evidence). Then we only have to compare
+\(\alpha P(e|h_1)P(h_1)\) vs. \(\alpha P(e|h_2)P(h_2)\), where \(\alpha =
+  1/P(e)\), which we never need to calculate.
+</li>
+<li>\(P(h)\) is the "prior" of a hypothesis (cause/explanation) \(h\).
+</li>
+<li>\(P(h|e)\) is the "posterior" of \(h\), given evidence \(e\) is observed.
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> hidden 宏</h3>
+<div class="outline-text-3" id="text-6-2">
+<div class="org-src-container">
+
+<pre class="src src-prolog"><span class="org-function-name">member</span>(5, <span class="org-keyword">[</span>1, 2, 3<span class="org-keyword">]</span>).
+<span class="org-function-name">member</span>(<span class="org-variable-name">X</span>, <span class="org-keyword">[</span>1, 2, 3<span class="org-keyword">]</span>).
+<span class="org-function-name">foobar</span>(1, <span class="org-keyword">[</span>1, 2, 3<span class="org-keyword">]</span>).
+<span class="org-function-name">foobar</span>(1, <span class="org-keyword">[</span>1, 1, 1<span class="org-keyword">]</span>).
+</pre>
+</div>
+
+<div class="hidden"><strong>点我查看答案 <small>click to toggle</small></strong><div class="hidden-content">
+<div class="org-src-container">
+
+<pre class="src src-prolog"><span class="org-function-name">member</span>(5, <span class="org-keyword">[</span>1, 2, 3<span class="org-keyword">]</span>). <span class="org-comment">% --&gt; false</span>
+<span class="org-function-name">member</span>(<span class="org-variable-name">X</span>, <span class="org-keyword">[</span>1, 2, 3<span class="org-keyword">]</span>). <span class="org-comment">% --&gt; X = 1 or 2 or 3</span>
+<span class="org-function-name">foobar</span>(1, <span class="org-keyword">[</span>1, 2, 3<span class="org-keyword">]</span>). <span class="org-comment">% --&gt; true</span>
+<span class="org-function-name">foobar</span>(1, <span class="org-keyword">[</span>1, 1, 1<span class="org-keyword">]</span>). <span class="org-comment">% --&gt; false</span>
+</pre>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> 扩展功能</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+先配置 Emacs 打开扩展:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span class="org-rainbow-delimiters-depth-1">(</span>org-babel-do-load-languages
+  'org-babel-load-languages
+  '<span class="org-rainbow-delimiters-depth-2">(</span>
+     <span class="org-rainbow-delimiters-depth-3">(</span>dot . t<span class="org-rainbow-delimiters-depth-3">)</span>
+     <span class="org-rainbow-delimiters-depth-3">(</span>sh . t<span class="org-rainbow-delimiters-depth-3">)</span>
+     <span class="org-rainbow-delimiters-depth-3">(</span>ditaa . t<span class="org-rainbow-delimiters-depth-3">)</span>
+     <span class="org-rainbow-delimiters-depth-3">(</span>plantuml . t<span class="org-rainbow-delimiters-depth-3">)</span><span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span><span class="org-rainbow-delimiters-unmatched">)</span>
+
+<span class="org-rainbow-delimiters-unmatched">(</span>setq org-plantuml-jar-path <span class="org-string">"~/bin/plantuml.jar"</span><span class="org-rainbow-delimiters-unmatched">)</span>
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> <a href="http://ditaa.sourceforge.net">ditaa</a></h3>
+<div class="outline-text-3" id="text-7-1">
+<div class="org-src-container">
+
+<pre class="src src-ditaa">+--------------+
+|              |
+| Hello World! |
+|              |
++--------------+
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="images/ditaa-example.png" alt="ditaa-example.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> <a href="http://graphviz.org/">Graphviz</a></h3>
+<div class="outline-text-3" id="text-7-2">
+<div class="org-src-container">
+
+<pre class="src src-dot">digraph G {
+        subgraph cluster_0 {
+                style=filled;
+                color=lightgrey;
+                node [style=filled,color=white];
+                a0 -&gt; a1 -&gt; a2 -&gt; a3;
+                label = <span class="org-string">"process #1"</span>;
+        }
+
+        subgraph cluster_1 {
+                node [style=filled];
+                b0 -&gt; b1 -&gt; b2 -&gt; b3;
+                label = <span class="org-string">"process #2"</span>;
+                color=blue
+        }
+        start -&gt; a0;
+        start -&gt; b0;
+        a1 -&gt; b3;
+        b2 -&gt; a3;
+        a3 -&gt; a0;
+        a3 -&gt; end;
+        b3 -&gt; end;
+
+        start [shape=Mdiamond];
+        end [shape=Msquare];
+}
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="images/graphviz-example.png" alt="graphviz-example.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-7-3" class="outline-3">
+<h3 id="sec-7-3"><span class="section-number-3">7.3</span> <a href="http://plantuml.com/">PlantUML</a></h3>
+<div class="outline-text-3" id="text-7-3">
+<p>
+设置:
+</p>
+
+
+
+<div class="org-src-container">
+
+<pre class="src src-plantuml">class Dummy {
+  String data
+  void methods()
+}
+
+class Flight {
+   flightNumber : Integer
+   departureTime : Date
+}
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="images/plantuml-example.png" alt="plantuml-example.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> 导出</h2>
+<div class="outline-text-2" id="text-8">
+</div><div id="outline-container-sec-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> html</h3>
+</div>
+
+<div id="outline-container-sec-8-2" class="outline-3">
+<h3 id="sec-8-2"><span class="section-number-3">8.2</span> <span class="todo TODO">TODO</span> LaTeX</h3>
+<div class="outline-text-3" id="text-8-2">
+<p>
+待续
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-8-3" class="outline-3">
+<h3 id="sec-8-3"><span class="section-number-3">8.3</span> docx</h3>
+<div class="outline-text-3" id="text-8-3">
+<div class="org-src-container">
+
+<pre class="src src-sh">cat file.org | perl -p -e <span class="org-string">"s/\[\[file:/[[/gi;"</span> | pandoc -f org -o file.docx
+</pre>
+</div>
+
+<p>
+见: <a href="features.docx">features.docx</a>
+</p>
+
+<hr  />
+
+<p>
+配置七牛的命令行工具 <a href="http://developer.qiniu.com/docs/v6/tools/qrsync.html"><code>qrsync</code></a>:
+</p>
+
+<pre class="example">
+{
+    "src": "publish",
+    "dest":  "qiniu:access_key=&lt;ak&gt;&amp;secret_key=&lt;sk&gt;&amp;bucket=&lt;b&gt;&amp;KeyPrefix=org/",
+    "debug_level": 1
+}
+</pre>
+
+<p>
+Org 源码:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-org"><span class="org-org-level-1">* &#22522;&#26412;</span>
+
+- &#19968;&#33324;&#24378;&#35843;
+  + <span class="org-bold">*&#21152;&#31895;*</span>
+  + <span class="org-italic">/&#26012;&#20307;/</span>
+  + <span class="org-underline">_&#19979;&#21010;&#32447;_</span>
+  + <span class="org-org-code">~&#20195;&#30721;~</span>
+  + <span class="org-org-verbatim">=verbatim=</span>
+  + <span class="ATTRLIST">+&#21024;&#38500;+</span>
+
+- &#23450;&#20041;
+  + <span class="org-org-list-dt">\alpha ::</span> the utility of the best (highest-value) choice we have
+              found so far at any choice point along the path in the
+              "max" mode of minimax
+  + <span class="org-org-list-dt">\beta ::</span> the utility of the best (lowest-value) choice for the
+             "min" mode of minimax
+
+- <span class="org-org-link">&#36229;&#38142;&#25509;</span>
+
+- &#24341;&#29992;
+<span class="org-org-block-begin-line">  #+BEGIN_QUOTE</span>
+  &#32477;&#26395;&#20043;&#20026;&#34394;&#22916;, &#27491;&#19982;&#24076;&#26395;&#30456;&#21516;.
+                 --- &#40065;&#36805;
+<span class="org-org-block-end-line">  #+END_QUOTE</span>
+
+<span class="org-org-level-1">* &#34920;&#26684;</span>
+
+<span class="org-org-table">| N | N^2 | N^3 | N^4 | </span><span class="org-org-table"><span class="org-org-code">~sqrt(n)~</span></span><span class="org-org-table"> | </span><span class="org-org-table"><span class="org-org-code">~sqrt[4](N)~</span></span><span class="org-org-table"> |</span>
+<span class="org-org-table">|---+-----+-----+-----+-----------+--------------|</span>
+<span class="org-org-table">|</span><span class="org-org-formula"> / |   &lt; |     |   &gt; |         &lt; |            &gt; </span><span class="org-org-table">|</span>
+<span class="org-org-table">| 1 |   1 |   1 |   1 |         1 |            1 |</span>
+<span class="org-org-table">| 2 |   4 |   8 |  16 | 1.4142136 |    1.1892071 |</span>
+<span class="org-org-table">| 3 |   9 |  27 |  81 | 1.7320508 |    1.3160740 |</span>
+<span class="org-org-table">|---+-----+-----+-----+-----------+--------------|</span>
+<span class="org-org-meta-line">#+TBLFM: $2=$1^2::$3=$1^3::$4=$1^4::$5=sqrt($1)::$6=sqrt(sqrt(($1)))</span>
+
+<span class="org-org-level-1">* &#20195;&#30721;</span>
+
+<span class="org-org-level-2">** &#22810;&#35821;&#35328;&#39640;&#20142;</span>
+
+1. Translate this code from a <span class="org-org-verbatim">=for=</span> loop into a <span class="org-org-verbatim">=while=</span> loop that does
+   the same thing.
+
+<span class="org-org-block-begin-line">   #+BEGIN_SRC python -n</span>
+<span class="org-org-block">   for i in range(1,100):</span>
+<span class="org-org-block">       print "i = ", i</span>
+<span class="org-org-block-end-line">   #+END_SRC</span>
+
+2. Translate this code from a <span class="org-org-verbatim">=while=</span> loop into a <span class="org-org-verbatim">=for=</span> loop that does
+   the same thing:
+
+<span class="org-org-block-begin-line">   #+BEGIN_SRC python</span>
+<span class="org-org-block">   i = 20</span>
+<span class="org-org-block">   while (i &gt; 0):</span>
+<span class="org-org-block">       print "i = ", i</span>
+<span class="org-org-block">       i -= 1</span>
+<span class="org-org-block-end-line">   #+END_SRC</span>
+
+<span class="org-org-level-2">** &#32034;&#24341;</span>
+
+<span class="org-org-block-begin-line">#+BEGIN_SRC c -n -r</span>
+<span class="org-org-block">  #include &lt;stdio.h&gt;</span>
+
+<span id="coderef-argv" class="coderef-off"><span class="org-org-block">  int main( int argc, char **argv)</span> (argv)</span>
+<span class="org-org-block">  {</span>
+<span id="coderef-atoi" class="coderef-off"><span class="org-org-block">      int a = atoi( argv[1] );</span> (atoi)</span>
+<span class="org-org-block">      int b = atoi( argv[2] );</span>
+<span class="org-org-block">      printf( "a + b = %d + %d = %d\n", a, b, a+b );</span>
+<span class="org-org-block">      return 0;</span>
+<span class="org-org-block">  }</span>
+<span class="org-org-block-end-line">#+END_SRC</span>
+
+- <span class="org-org-link">&#31532; (argv) &#34892;</span> &#30340; <span class="org-org-code">~argc~</span> &#26159; count of args (arguments), <span class="org-org-code">~argv~</span> &#26159;
+  arguments &#25968;&#32452;.
+- <span class="org-org-link">&#31532; (atoi) &#34892;</span> &#30340; <span class="org-org-code">~atoi~</span> &#25226; <span class="org-org-code">~char *~</span> &#36716;&#21270;&#20026; <span class="org-org-code">~int~</span>.
+
+<span class="org-org-level-1">* &#20844;&#24335;</span>
+
+We see that there are three variable assignments that make the whole
+expression true: $x$ is false, $y$ is true, and $z$ is true; $x$ is
+false, $y$ is false, and $z$ is true; and $x$ is false, $y$ is false,
+and $z$ is false.
+
+Boole's and De Morgan's Laws
+
+  - $\neg F \equiv T$
+
+  - $\neg T \equiv F$
+
+\begin{matrix}
+1 &amp; x &amp; x^2 \\
+1 &amp; y &amp; y^2 \\
+1 &amp; z &amp; z^2 \\
+\end{matrix}
+
+f(n) =
+\begin{cases}
+n/2,  &amp; \text{if $n$ is even} \\
+3n+1, &amp; \text{if $n$ is odd}
+\end{cases}
+
+<span class="org-org-level-1">* &#22270;&#29255;</span>
+
+<span class="org-org-level-2">** &#23621;&#20013;</span>
+
+<span class="org-org-block-begin-line">#+BEGIN_CENTER</span>
+<span class="org-org-link">./images/lena.jpg</span>
+<span class="org-org-block-end-line">#+END_CENTER</span>
+
+<span class="org-org-level-2">** &#24038;&#20391;</span>
+
+<span class="org-org-block-begin-line">#+BEGIN_HTML</span>
+<span class="org-org-block">&lt;img align="left" src="images/lena.jpg" alt="Lena (Lenna) S&#246;derberg"</span>
+<span class="org-org-block">title="Lena (Lenna) S&#246;derberg" style="margin: 0 10px 10px 0;"/&gt;</span>
+<span class="org-org-block-end-line">#+END_HTML</span>
+
+This photo of Lena (Lenna) S&#246;derberg is the most widely used test
+image for computer vision applications. I have made a conscious
+decision to use this image for examples on this webpage. We should be
+respectful of the woman in the photo and know how this image came to
+be. Read about the photo at <span class="org-org-link"><span class="org-whitespace-line">The Lenna story</span></span><span class="org-whitespace-line">.</span>
+
+<span class="org-org-block-begin-line">#+BEGIN_HTML</span>
+<span class="org-org-block">&lt;div style="clear: both;" /&gt;</span>
+<span class="org-org-block-end-line">#+END_HTML</span>
+
+<span class="org-org-level-2">** &#22810;&#22270;</span>
+
+<span class="org-org-block-begin-line">#+BEGIN_HTML</span>
+<span class="org-org-block">&lt;div style="clear: both;"/&gt;</span>
+<span class="org-org-block-end-line">#+END_HTML</span>
+
+<span class="org-org-table">| </span><span class="org-org-link">./images/lena-blur10x10.jpg</span><span class="org-org-table">               | </span><span class="org-org-link">./images/lena-blur20x20.jpg</span><span class="org-org-table"><span class="org-whitespace-line">                 | </span></span><span class="org-org-link"><span class="org-whitespace-line">./images/lena-blur20x1.jpg</span></span><span class="org-org-table"><span class="org-whitespace-line">               |</span></span>
+<span class="org-org-table">| Kernel is 10x10, all values equal to 0.01 | Kernel is 20x20, all values equal </span><span class="org-org-table"><span class="org-whitespace-line">to 0.0025 | Kernel is 20x1, all values equal to 0.05 |</span></span>
+
+We can also achieve a sharpening effect.
+
+<span class="org-org-table">| </span><span class="org-org-link">./images/sharpen-convolution.png</span><span class="org-org-table"> | </span><span class="org-org-link">./images/lena-sharpen.jpg</span><span class="org-org-table"> |</span>
+
+<span class="org-org-block-begin-line">#+BEGIN_CENTER</span>
+<span class="org-org-link">./images/3D_Convolution_Animation.gif</span>
+
+From <span class="org-org-link">Wikiped</span><span class="org-org-link"><span class="org-whitespace-line">ia</span></span>
+<span class="org-org-block-end-line">#+END_CENTER</span>
+
+<span class="org-org-level-1">* &#23439;&#23450;&#20041;</span>
+
+<span class="org-org-level-2">** summary &#23439;</span>
+
+<span class="org-org-macro">{{{begin-summary}}}</span>
+- $P(a|b) = P(b|a)P(a)/P(b)$ is Bayes' formula ("Bayes' rule", "Bayes'
+  theorem"); it is just a rewrite of the rules of probability. It is
+  required that $P(b) \neq 0$.
+- Sometimes, we only want to know if $P(h_1|e) &gt; P(h_2|e)$
+  (probability of hypothesis 1 is greater than probability of
+  hypothesis 2, given the evidence). Then we only have to compare
+  $\alpha P(e|h_1)P(h_1)$ vs. $\alpha P(e|h_2)P(h_2)$, where $\alpha =
+  1/P(e)$, which we never need to calculate.
+- $P(h)$ is the "prior" of a hypothesis (cause/explanation) $h$.
+- $P(h|e)$ is the "posterior" of $h$, given evidence $e$ is observed.
+<span class="org-org-macro">{{{end-summary}}}</span>
+
+<span class="org-org-level-2">** hidden &#23439;</span>
+
+<span class="org-org-block-begin-line">#+BEGIN_SRC prolog</span>
+<span class="org-org-block">member(5, [1, 2, 3]).</span>
+<span class="org-org-block">member(X, [1, 2, 3]).</span>
+<span class="org-org-block">foobar(1, [1, 2, 3]).</span>
+<span class="org-org-block">foobar(1, [1, 1, 1]).</span>
+<span class="org-org-block-end-line">#+END_SRC</span>
+
+<span class="org-org-macro">{{{begin-hidden(&#28857;&#25105;&#26597;&#30475;&#31572;&#26696;)}}}</span>
+<span class="org-org-block-begin-line">#+BEGIN_SRC prolog</span>
+<span class="org-org-block">member(5, [1, 2, 3]). % --&gt; false</span>
+<span class="org-org-block">member(X, [1, 2, 3]). % --&gt; X = 1 or 2 or 3</span>
+<span class="org-org-block">foobar(1, [1, 2, 3]). % --&gt; true</span>
+<span class="org-org-block">foobar(1, [1, 1, 1]). % --&gt; false</span>
+<span class="org-org-block-end-line">#+END_SRC</span>
+<span class="org-org-macro">{{{end-hidden}}}</span>
+<span class="org-org-level-1">* &#25193;&#23637;&#21151;&#33021;</span>
+
+&#20808;&#37197;&#32622; Emacs &#25171;&#24320;&#25193;&#23637;:
+
+<span class="org-org-block-begin-line">#+BEGIN_SRC emacs-lisp</span>
+<span class="org-org-block">  (org-babel-do-load-languages</span>
+<span class="org-org-block">    'org-babel-load-languages</span>
+<span class="org-org-block">    '(</span>
+<span class="org-org-block">       (dot . t)</span>
+<span class="org-org-block">       (sh . t)</span>
+<span class="org-org-block">       (ditaa . t)</span>
+<span class="org-org-block">       (plantuml . t))))</span>
+
+<span class="org-org-block">  (setq org-plantuml-jar-path "~/bin/plantuml.jar")</span>
+<span class="org-org-block-end-line">#+END_SRC</span>
+
+<span class="org-org-level-2">** </span><span class="org-org-link">ditaa</span>
+
+<span class="org-org-block-begin-line">#+BEGIN_SRC ditaa :file images/ditaa-example.png :exports both</span>
+<span class="org-org-block">  +--------------+</span>
+<span class="org-org-block">  |              |</span>
+<span class="org-org-block">  | Hello World! |</span>
+<span class="org-org-block">  |              |</span>
+<span class="org-org-block">  +--------------+</span>
+<span class="org-org-block-end-line">#+END_SRC</span>
+
+<span class="org-org-meta-line">#+RESULTS:</span>
+<span class="org-org-link">file:images/ditaa-example.png</span>
+
+<span class="org-org-level-2">** </span><span class="org-org-link">Graphviz</span>
+
+<span class="org-org-block-begin-line">#+BEGIN_SRC dot :file images/graphviz-example.png :exports both</span>
+<span class="org-org-block">  digraph G {</span>
+<span class="org-org-block">          subgraph cluster_0 {</span>
+<span class="org-org-block">                  style=filled;</span>
+<span class="org-org-block">                  color=lightgrey;</span>
+<span class="org-org-block">                  node [style=filled,color=white];</span>
+<span class="org-org-block">                  a0 -&gt; a1 -&gt; a2 -&gt; a3;</span>
+<span class="org-org-block">                  label = "process #1";</span>
+<span class="org-org-block">          }</span>
+
+<span class="org-org-block">          subgraph cluster_1 {</span>
+<span class="org-org-block">                  node [style=filled];</span>
+<span class="org-org-block">                  b0 -&gt; b1 -&gt; b2 -&gt; b3;</span>
+<span class="org-org-block">                  label = "process #2";</span>
+<span class="org-org-block">                  color=blue</span>
+<span class="org-org-block">          }</span>
+<span class="org-org-block">          start -&gt; a0;</span>
+<span class="org-org-block">          start -&gt; b0;</span>
+<span class="org-org-block">          a1 -&gt; b3;</span>
+<span class="org-org-block">          b2 -&gt; a3;</span>
+<span class="org-org-block">          a3 -&gt; a0;</span>
+<span class="org-org-block">          a3 -&gt; end;</span>
+<span class="org-org-block">          b3 -&gt; end;</span>
+
+<span class="org-org-block">          start [shape=Mdiamond];</span>
+<span class="org-org-block">          end [shape=Msquare];</span>
+<span class="org-org-block">  }</span>
+<span class="org-org-block-end-line">#+END_SRC</span>
+
+<span class="org-org-meta-line">#+RESULTS:</span>
+<span class="org-org-link">file:images/graphviz-example.png</span>
+
+<span class="org-org-level-2">** </span><span class="org-org-link">PlantUML</span>
+
+&#35774;&#32622;:
+
+
+
+<span class="org-org-block-begin-line">#+BEGIN_SRC plantuml :file images/plantuml-example.png :exports both</span>
+<span class="org-org-block">class Dummy {</span>
+<span class="org-org-block">  String data</span>
+<span class="org-org-block">  void methods()</span>
+<span class="org-org-block">}</span>
+
+<span class="org-org-block">class Flight {</span>
+<span class="org-org-block">   flightNumber : Integer</span>
+<span class="org-org-block">   departureTime : Date</span>
+<span class="org-org-block">}</span>
+<span class="org-org-block-end-line">#+END_SRC</span>
+
+<span class="org-org-meta-line">#+RESULTS:</span>
+<span class="org-org-link">file:images/plantuml-example.png</span>
+
+<span class="org-org-level-1">* &#23548;&#20986;</span>
+
+<span class="org-org-level-2">** html</span>
+
+<span class="org-org-level-2">** </span><span class="org-org-todo">TODO</span><span class="org-org-level-2"> LaTeX</span>
+
+&#24453;&#32493;
+
+<span class="org-org-level-2">** docx</span>
+
+<span class="org-org-block-begin-line">#+BEGIN_SRC sh</span>
+<span class="org-org-block">  cat file.org | perl -p -e "s/\[\[file:/[[/gi;" | pandoc -f org -o file.docx</span>
+<span class="org-org-block-end-line">#+END_SRC</span>
+
+&#35265;: <span class="org-org-link">features.docx</span>
+</pre>
+</div>
+
+<hr  />
+<div class="center">
+<p>
+Blog by an Org-mode Blogger.
+</p>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<script type="text/javascript">
+$('.hidden .hidden-content').hide();
+$('.hidden > strong').click(function() {
+  $(this).parent().find('.hidden-content').toggle();
+});
+</script>
+
+<script type="text/javascript" src="js/main.js"></script>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: An Org-mode Blogger</p>
+<p class="date">Created: 2016-02-08 一 21:18</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
