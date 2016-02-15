@@ -1,0 +1,18 @@
+-----
+#+BEGIN_CENTER
+Blog by an Org-mode Blogger.
+#+END_CENTER
+
+#+BEGIN_HTML
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<script type="text/javascript">
+$('.hidden .hidden-content').hide();
+$('.hidden > strong').click(function() {
+  $(this).parent().find('.hidden-content').toggle();
+});
+</script>
+
+<script type="text/javascript" src="js/main.js"></script>
+#+END_HTML

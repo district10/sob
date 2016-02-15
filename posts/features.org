@@ -1,0 +1,26 @@
+#+SETUPFILE: setup.org
+#+TITLE: 支持的特性
+
+注:
+
+图片和示例均来自 [[http://cse3521.artifice.cc/index.html][/Intro to AI/ by Joshua Eckroth]]
+
+#+INCLUDE: features.raw.org
+
+-----
+
+配置七牛的命令行工具 [[http://developer.qiniu.com/docs/v6/tools/qrsync.html][~qrsync~]]:
+
+#+BEGIN_EXAMPLE
+  {
+      "src": "publish",
+      "dest":  "qiniu:access_key=<ak>&secret_key=<sk>&bucket=<b>&KeyPrefix=org/",
+      "debug_level": 1
+  }
+#+END_EXAMPLE
+
+Org 源码:
+
+#+INCLUDE: features.raw.org src org
+
+#+INCLUDE: footer.org
