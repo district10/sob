@@ -261,6 +261,64 @@ class Flight {
 #+RESULTS:
 [[file:images/plantuml-example.png]]
 
+* 加密
+
+现生成 GPG 蜜月, 见 [[http://www.ruanyifeng.com/blog/2013/07/gpg.html][GPG入门教程 - 阮一峰的网络日志]]
+
+#+BEGIN_EXAMPLE
+#+END_EXAMPLE
+
+用 GPG 加密, 比如我的
+
+#+BEGIN_SRC emacs-lisp
+;; pgp
+(require 'org-crypt)
+(org-crypt-use-before-save-magic)
+(setq org-crypt-tag-matcher "secret")
+(setq org-tags-exclude-from-inheritance (quote ("secret")))
+(setq org-crypt-key "TANG ZhiXiong")
+#+END_SRC
+
+加密后你就看不到了. 就像下一个标签. 保存的时候就会自动加密.
+
+** 你看不到我                                                        :secret:
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+hQEMA/UK1fWnkkUVAQgAha+jHx4oRpLNxJ59utczwjQ37Zlq5XRVCwMqy6f5s27V
+sCagmo2Gqfj781qsgpaduIGKXULgdtbbZ97+6B08zgESQTkSLBMnmqMB9LEapwQO
+lHYlBdVq/bTbYU66/qbEZ+Jf8FfRQ/q1NUK7xSQhI8NMFaswNq7/wAeSPVOW0kuI
+RV8nk6AJgmLHRVrbkDHlhHZIVz1+1usZBQpkclWTg/y/9tNrargl0n2Q3IZQRl4c
+i7h6r6bYErTIT4DpEv+tih56LR6+Q9JIHZ03RGQhm5OqNlOSpcvP4B9bz/b5Sr9U
+8BzQkdMMJzs91vjgrDRNT+SA3BRhDpo+0NzY0WF5v9LpAaN2Vm3n5w62v2W4zLzH
+QfbL4L52yzOyy5quYKlOvN9/UGZHXMbgFa1XuDE1w1TC2poVREebfk8GykBy9KLm
+PqJ//dtc2PRPEEsJRODDEqgyNzXsSwedFtMnV3+XczvFv5+YUUH40X0aNrvqA37x
+5vhw6gwHsYNMFYTqMJzg4w4LFu/7qWJ9myqEXxT4Wv0lH0XuTZdlUgeleSCxqgLU
+DhmJH3+mbthWYLRT4Z+IZmWHqYgg1Cydr/sYJ1xVHbdKnbIGf1/uF1WnYQe4L41H
+JsZraG2pNQaLwSVdtOCf4BHXt+3X98BAVSO1I//V9igdnt++Od31PiBMaM+vfY7W
+ZVisvIzZiSc+goDyESK5oWJBciBizcH8d8WmLGi40PdRSEyX6mW9SGlm6Aofrkr9
+qDbMfyqCo4O+QGjd3C7X1i7I0qMtRS0vWCIc8wmlZrSp8vHHm+YxHdczHpJnj292
+1yr8fjkpRpJUljnd/lOLFFmSF+Mw2ByF5OHpgZmkhrFjRI6AQ1NmAEqPVgE9LDmm
+vfH8CaVhNXlzsNVvr9wI4xU645HOGMn16ygrJCy81cCgbm2X7PAGqhsi8TLkRr++
+RvKS57a9CrLgIrmjUXsgCM9fHOcL4nUYHsspuCRGPg09+AW+1deOEyZ1mkzoC13+
+BlNBjtqE+kQwB5u4F2GA2kvBJjrxKx/T9SD4pkFJmUvEcG6BtvNwQzpnwhHvlnJU
+wr51wELCB9sEF4cNjXRqXLpufrDimqsKuVq09CUklSKG0QFuGn4OotTZUSrDxjbP
+KFHiQVyDzj7kVO9K7qjDLZGNehkF/7AmKl3BtiaeVaJvEyPxzgUlADrhiNPCg7oR
+7QEfuyxiTWs6fcYnWk/5lpjpeq0yP+xquMjQwCvQV3miXh4jWkoRXIgFPMy0/KTP
+LJKkN53uULd3UI1913lEleFPaPpzqekU2RA34cOFUtOGQefs2hYbuAbZSdPTUDho
+vDrvvLYRl+tSQAwFnR9MGcVTyPSC4+ROPGB+ABDOz4RkSBvLj1ORsVLk7iuHlOkL
+0YH3uKwEY3R8clKvhEp68fSDCA8bI6+QfoJrUCrvI06+jLc3Bxq+4X+63OEfx1f3
+Z+mMzpiT5q2Rj3mQL5Z7kwxAT55Hl/hRO/wkUkT3YegXiTJFNbZLnnMABccbk4uI
+zaOyAXHHL0JOIFeaxJWyVMLBUuVZDErksspWddk7f0gYIT1BCwrV4uV5D796Uyv/
+4YqUPIYJwC5K2XPj6o09cEOI39FfJOx34nvhxRxKou+O3Ofwld3OAgGdX4zl26Dl
+oUVyUlvFWbRQqOiDp0j3JZXSl9ObFFF4Tg==
+=3wea
+-----END PGP MESSAGE-----
+
+** 如何揭密
+
+=org-decrypt-entry=
+
 * 导出
 
 ** html
