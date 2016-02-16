@@ -266,9 +266,17 @@ class Flight {
 现生成 GPG 蜜月, 见 [[http://www.ruanyifeng.com/blog/2013/07/gpg.html][GPG入门教程 - 阮一峰的网络日志]]
 
 #+BEGIN_EXAMPLE
+$ gpg --gen-key
+$ gpg --list-keys
+$ gpg --armor --output public-key.txt --export [用户ID]
+$ gpg --armor --output private-key.txt --export-secret-keys
 #+END_EXAMPLE
 
-用 GPG 加密, 比如我的
+上传自己的 pub key 到: [[http://keys.gnupg.net:11371/][SKS OpenPGP Public Key Server]]
+
+然后搜一下自己的: [[http://keys.gnupg.net:11371/pks/lookup?op=vindex&search=TANG+ZhiXiong&fingerprint=on][我的密钥]]
+
+用 GPG 加密.
 
 #+BEGIN_SRC emacs-lisp
 ;; pgp
