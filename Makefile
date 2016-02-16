@@ -25,7 +25,7 @@ $(PUBLISH)/features.docx: $(POST)/features.raw.org
 
 qn: qiniu
 qiniu:
-	qrsync conf.json
+	qrsync ~/conf/sob.json
 
 gh: github
 github:
