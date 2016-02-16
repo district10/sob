@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>支持的特性</title>
-<!-- 2016-02-08 一 21:18 -->
+<!-- 2016-02-16 二 20:45 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="An Org-mode Blogger" />
@@ -215,11 +215,17 @@ for the JavaScript code in this tag.
 <li><a href="#sec-7-3">7.3. PlantUML</a></li>
 </ul>
 </li>
-<li><a href="#sec-8">8. 导出</a>
+<li><a href="#sec-8">8. 加密</a>
 <ul>
-<li><a href="#sec-8-1">8.1. html</a></li>
-<li><a href="#sec-8-2">8.2. <span class="todo TODO">TODO</span> LaTeX</a></li>
-<li><a href="#sec-8-3">8.3. docx</a></li>
+<li><a href="#sec-8-1">8.1. 你看不到我&#xa0;&#xa0;&#xa0;<span class="tag"><span class="secret">secret</span></span></a></li>
+<li><a href="#sec-8-2">8.2. 如何揭密</a></li>
+</ul>
+</li>
+<li><a href="#sec-9">9. 导出</a>
+<ul>
+<li><a href="#sec-9-1">9.1. html</a></li>
+<li><a href="#sec-9-2">9.2. <span class="todo TODO">TODO</span> LaTeX</a></li>
+<li><a href="#sec-9-3">9.3. docx</a></li>
 </ul>
 </li>
 </ul>
@@ -715,24 +721,106 @@ class Flight {
 </div>
 
 <div id="outline-container-sec-8" class="outline-2">
-<h2 id="sec-8"><span class="section-number-2">8</span> 导出</h2>
+<h2 id="sec-8"><span class="section-number-2">8</span> 加密</h2>
 <div class="outline-text-2" id="text-8">
-</div><div id="outline-container-sec-8-1" class="outline-3">
-<h3 id="sec-8-1"><span class="section-number-3">8.1</span> html</h3>
+<p>
+现生成 GPG 蜜月, 见 <a href="http://www.ruanyifeng.com/blog/2013/07/gpg.html">GPG入门教程 - 阮一峰的网络日志</a>
+</p>
+
+<pre class="example">
+</pre>
+
+<p>
+用 GPG 加密, 比如我的
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span class="org-comment-delimiter">;; </span><span class="org-comment">pgp</span>
+<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-keyword">require</span> '<span class="org-constant">org-crypt</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-rainbow-delimiters-depth-1">(</span>org-crypt-use-before-save-magic<span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-rainbow-delimiters-depth-1">(</span>setq org-crypt-tag-matcher <span class="org-string">"secret"</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-rainbow-delimiters-depth-1">(</span>setq org-tags-exclude-from-inheritance <span class="org-rainbow-delimiters-depth-2">(</span>quote <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">"secret"</span><span class="org-rainbow-delimiters-depth-3">)</span><span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+<span class="org-rainbow-delimiters-depth-1">(</span>setq org-crypt-key <span class="org-string">"TANG ZhiXiong"</span><span class="org-rainbow-delimiters-depth-1">)</span>
+</pre>
+</div>
+
+<p>
+加密后你就看不到了. 就像下一个标签. 保存的时候就会自动加密.
+</p>
+</div>
+
+<div id="outline-container-sec-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> 你看不到我&#xa0;&#xa0;&#xa0;<span class="tag"><span class="secret">secret</span></span></h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+&#x2013;&#x2014;BEGIN PGP MESSAGE&#x2013;&#x2014;
+Version: GnuPG v1
+</p>
+
+<p>
+hQEMA/UK1fWnkkUVAQgAha+jHx4oRpLNxJ59utczwjQ37Zlq5XRVCwMqy6f5s27V
+sCagmo2Gqfj781qsgpaduIGKXULgdtbbZ97+6B08zgESQTkSLBMnmqMB9LEapwQO
+lHYlBdVq/bTbYU66/qbEZ+Jf8FfRQ/q1NUK7xSQhI8NMFaswNq7/wAeSPVOW0kuI
+RV8nk6AJgmLHRVrbkDHlhHZIVz1+1usZBQpkclWTg/y/9tNrargl0n2Q3IZQRl4c
+i7h6r6bYErTIT4DpEv+tih56LR6+Q9JIHZ03RGQhm5OqNlOSpcvP4B9bz/b5Sr9U
+8BzQkdMMJzs91vjgrDRNT+SA3BRhDpo+0NzY0WF5v9LpAaN2Vm3n5w62v2W4zLzH
+QfbL4L52yzOyy5quYKlOvN9/UGZHXMbgFa1XuDE1w1TC2poVREebfk8GykBy9KLm
+PqJ//dtc2PRPEEsJRODDEqgyNzXsSwedFtMnV3+XczvFv5+YUUH40X0aNrvqA37x
+5vhw6gwHsYNMFYTqMJzg4w4LFu/7qWJ9myqEXxT4Wv0lH0XuTZdlUgeleSCxqgLU
+DhmJH3+mbthWYLRT4Z+IZmWHqYgg1Cydr/sYJ1xVHbdKnbIGf1/uF1WnYQe4L41H
+JsZraG2pNQaLwSVdtOCf4BHXt+3X98BAVSO1I//V9igdnt++Od31PiBMaM+vfY7W
+ZVisvIzZiSc+goDyESK5oWJBciBizcH8d8WmLGi40PdRSEyX6mW9SGlm6Aofrkr9
+qDbMfyqCo4O+QGjd3C7X1i7I0qMtRS0vWCIc8wmlZrSp8vHHm+YxHdczHpJnj292
+1yr8fjkpRpJUljnd/lOLFFmSF+Mw2ByF5OHpgZmkhrFjRI6AQ1NmAEqPVgE9LDmm
+vfH8CaVhNXlzsNVvr9wI4xU645HOGMn16ygrJCy81cCgbm2X7PAGqhsi8TLkRr++
+RvKS57a9CrLgIrmjUXsgCM9fHOcL4nUYHsspuCRGPg09+AW+1deOEyZ1mkzoC13+
+BlNBjtqE+kQwB5u4F2GA2kvBJjrxKx/T9SD4pkFJmUvEcG6BtvNwQzpnwhHvlnJU
+wr51wELCB9sEF4cNjXRqXLpufrDimqsKuVq09CUklSKG0QFuGn4OotTZUSrDxjbP
+KFHiQVyDzj7kVO9K7qjDLZGNehkF/7AmKl3BtiaeVaJvEyPxzgUlADrhiNPCg7oR
+7QEfuyxiTWs6fcYnWk/5lpjpeq0yP+xquMjQwCvQV3miXh4jWkoRXIgFPMy0/KTP
+LJKkN53uULd3UI1913lEleFPaPpzqekU2RA34cOFUtOGQefs2hYbuAbZSdPTUDho
+vDrvvLYRl+tSQAwFnR9MGcVTyPSC4+ROPGB+ABDOz4RkSBvLj1ORsVLk7iuHlOkL
+0YH3uKwEY3R8clKvhEp68fSDCA8bI6+QfoJrUCrvI06+jLc3Bxq+4X+63OEfx1f3
+Z+mMzpiT5q2Rj3mQL5Z7kwxAT55Hl/hRO/wkUkT3YegXiTJFNbZLnnMABccbk4uI
+zaOyAXHHL0JOIFeaxJWyVMLBUuVZDErksspWddk7f0gYIT1BCwrV4uV5D796Uyv/
+4YqUPIYJwC5K2XPj6o09cEOI39FfJOx34nvhxRxKou+O3Ofwld3OAgGdX4zl26Dl
+oUVyUlvFWbRQqOiDp0j3JZXSl9ObFFF4Tg==
+=3wea
+&#x2013;&#x2014;END PGP MESSAGE&#x2013;&#x2014;
+</p>
+</div>
 </div>
 
 <div id="outline-container-sec-8-2" class="outline-3">
-<h3 id="sec-8-2"><span class="section-number-3">8.2</span> <span class="todo TODO">TODO</span> LaTeX</h3>
+<h3 id="sec-8-2"><span class="section-number-3">8.2</span> 如何揭密</h3>
 <div class="outline-text-3" id="text-8-2">
+<p>
+<code>org-decrypt-entry</code>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> 导出</h2>
+<div class="outline-text-2" id="text-9">
+</div><div id="outline-container-sec-9-1" class="outline-3">
+<h3 id="sec-9-1"><span class="section-number-3">9.1</span> html</h3>
+</div>
+
+<div id="outline-container-sec-9-2" class="outline-3">
+<h3 id="sec-9-2"><span class="section-number-3">9.2</span> <span class="todo TODO">TODO</span> LaTeX</h3>
+<div class="outline-text-3" id="text-9-2">
 <p>
 待续
 </p>
 </div>
 </div>
 
-<div id="outline-container-sec-8-3" class="outline-3">
-<h3 id="sec-8-3"><span class="section-number-3">8.3</span> docx</h3>
-<div class="outline-text-3" id="text-8-3">
+<div id="outline-container-sec-9-3" class="outline-3">
+<h3 id="sec-9-3"><span class="section-number-3">9.3</span> docx</h3>
+<div class="outline-text-3" id="text-9-3">
 <div class="org-src-container">
 
 <pre class="src src-sh">cat file.org | perl -p -e <span class="org-string">"s/\[\[file:/[[/gi;"</span> | pandoc -f org -o file.docx
@@ -1026,6 +1114,64 @@ From <span class="org-org-link">Wikiped</span><span class="org-org-link"><span c
 <span class="org-org-meta-line">#+RESULTS:</span>
 <span class="org-org-link">file:images/plantuml-example.png</span>
 
+<span class="org-org-level-1">* &#21152;&#23494;</span>
+
+&#29616;&#29983;&#25104; GPG &#34588;&#26376;, &#35265; <span class="org-org-link">GPG&#20837;&#38376;&#25945;&#31243; - &#38446;&#19968;&#23792;&#30340;&#32593;</span><span class="org-org-link"><span class="org-whitespace-line">&#32476;&#26085;&#24535;</span></span>
+
+<span class="org-org-block-begin-line">#+BEGIN_EXAMPLE</span>
+<span class="org-org-block-end-line">#+END_EXAMPLE</span>
+
+&#29992; GPG &#21152;&#23494;, &#27604;&#22914;&#25105;&#30340;
+
+<span class="org-org-block-begin-line">#+BEGIN_SRC emacs-lisp</span>
+<span class="org-org-block">;; pgp</span>
+<span class="org-org-block">(require 'org-crypt)</span>
+<span class="org-org-block">(org-crypt-use-before-save-magic)</span>
+<span class="org-org-block">(setq org-crypt-tag-matcher "secret")</span>
+<span class="org-org-block">(setq org-tags-exclude-from-inheritance (quote ("secret")))</span>
+<span class="org-org-block">(setq org-crypt-key "TANG ZhiXiong")</span>
+<span class="org-org-block-end-line">#+END_SRC</span>
+
+&#21152;&#23494;&#21518;&#20320;&#23601;&#30475;&#19981;&#21040;&#20102;. &#23601;&#20687;&#19979;&#19968;&#20010;&#26631;&#31614;. &#20445;&#23384;&#30340;&#26102;&#20505;&#23601;&#20250;&#33258;&#21160;&#21152;&#23494;.
+
+<span class="org-org-level-2">** &#20320;&#30475;&#19981;&#21040;&#25105;                                                        </span><span class="org-org-level-2"><span class="org-org-tag">:secret:</span></span>
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+hQEMA/UK1fWnkkUVAQgAha+jHx4oRpLNxJ59utczwjQ37Zlq5XRVCwMqy6f5s27V
+sCagmo2Gqfj781qsgpaduIGKXULgdtbbZ97+6B08zgESQTkSLBMnmqMB9LEapwQO
+lHYlBdVq/bTbYU66/qbEZ+Jf8FfRQ/q1NUK7xSQhI8NMFaswNq7/wAeSPVOW0kuI
+RV8nk6AJgmLHRVrbkDHlhHZIVz1+1usZBQpkclWTg/y/9tNrargl0n2Q3IZQRl4c
+i7h6r6bYErTIT4DpEv+tih56LR6+Q9JIHZ03RGQhm5OqNlOSpcvP4B9bz/b5Sr9U
+8BzQkdMMJzs91vjgrDRNT+SA3BRhDpo+0NzY0WF5v9LpAaN2Vm3n5w62v2W4zLzH
+QfbL4L52yzOyy5quYKlOvN9/UGZHXMbgFa1XuDE1w1TC2poVREebfk8GykBy9KLm
+PqJ//dtc2PRPEEsJRODDEqgyNzXsSwedFtMnV3+XczvFv5+YUUH40X0aNrvqA37x
+5vhw6gwHsYNMFYTqMJzg4w4LFu/7qWJ9myqEXxT4Wv0lH0XuTZdlUgeleSCxqgLU
+DhmJH3+mbthWYLRT4Z+IZmWHqYgg1Cydr/sYJ1xVHbdKnbIGf1/uF1WnYQe4L41H
+JsZraG2pNQaLwSVdtOCf4BHXt+3X98BAVSO1I//V9igdnt++Od31PiBMaM+vfY7W
+ZVisvIzZiSc+goDyESK5oWJBciBizcH8d8WmLGi40PdRSEyX6mW9SGlm6Aofrkr9
+qDbMfyqCo4O+QGjd3C7X1i7I0qMtRS0vWCIc8wmlZrSp8vHHm+YxHdczHpJnj292
+1yr8fjkpRpJUljnd/lOLFFmSF+Mw2ByF5OHpgZmkhrFjRI6AQ1NmAEqPVgE9LDmm
+vfH8CaVhNXlzsNVvr9wI4xU645HOGMn16ygrJCy81cCgbm2X7PAGqhsi8TLkRr++
+RvKS57a9CrLgIrmjUXsgCM9fHOcL4nUYHsspuCRGPg09+AW+1deOEyZ1mkzoC13+
+BlNBjtqE+kQwB5u4F2GA2kvBJjrxKx/T9SD4pkFJmUvEcG6BtvNwQzpnwhHvlnJU
+wr51wELCB9sEF4cNjXRqXLpufrDimqsKuVq09CUklSKG0QFuGn4OotTZUSrDxjbP
+KFHiQVyDzj7kVO9K7qjDLZGNehkF/7AmKl3BtiaeVaJvEyPxzgUlADrhiNPCg7oR
+7QEfuyxiTWs6fcYnWk/5lpjpeq0yP+xquMjQwCvQV3miXh4jWkoRXIgFPMy0/KTP
+LJKkN53uULd3UI1913lEleFPaPpzqekU2RA34cOFUtOGQefs2hYbuAbZSdPTUDho
+vDrvvLYRl+tSQAwFnR9MGcVTyPSC4+ROPGB+ABDOz4RkSBvLj1ORsVLk7iuHlOkL
+0YH3uKwEY3R8clKvhEp68fSDCA8bI6+QfoJrUCrvI06+jLc3Bxq+4X+63OEfx1f3
+Z+mMzpiT5q2Rj3mQL5Z7kwxAT55Hl/hRO/wkUkT3YegXiTJFNbZLnnMABccbk4uI
+zaOyAXHHL0JOIFeaxJWyVMLBUuVZDErksspWddk7f0gYIT1BCwrV4uV5D796Uyv/
+4YqUPIYJwC5K2XPj6o09cEOI39FfJOx34nvhxRxKou+O3Ofwld3OAgGdX4zl26Dl
+oUVyUlvFWbRQqOiDp0j3JZXSl9ObFFF4Tg==
+=3wea
+-----END PGP MESSAGE-----
+
+<span class="org-org-level-2">** &#22914;&#20309;&#25581;&#23494;</span>
+
+<span class="org-org-verbatim">=org-decrypt-entry=</span>
+
 <span class="org-org-level-1">* &#23548;&#20986;</span>
 
 <span class="org-org-level-2">** html</span>
@@ -1068,7 +1214,7 @@ $('.hidden > strong').click(function() {
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: An Org-mode Blogger</p>
-<p class="date">Created: 2016-02-08 一 21:18</p>
+<p class="date">Created: 2016-02-16 二 20:45</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
