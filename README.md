@@ -6,7 +6,7 @@ Sob: Simple Org-mode Blog
 ```json
 {
     "src": "publish",
-    "dest":  "qiniu:access_key=...&secret_key=...&bucket=tangzx&KeyPrefix=org/",
+    "dest":  "qiniu:access_key=...&secret_key=...&bucket=tangzx&key_prefix=org/",
     "debug_level": 1
 }
 ```
