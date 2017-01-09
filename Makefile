@@ -5,7 +5,8 @@ POST    = posts
 DATA    = data
 PUBLISH = publish
 
-all: containers contents docx
+STATICS := $(wildcard data/* css/* images/* js/* posts/*)
+all: $(STATICS:%=publish/%)
 
 containers: $(PUBLISH)/$(CSS) $(PUBLISH)/$(IMG) $(PUBLISH)/$(JS)
 $(PUBLISH)/%:
